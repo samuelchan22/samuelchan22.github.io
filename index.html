@@ -1,59 +1,41 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<style>
-			body {
-				background: url('2014 European Summer-121.jpg') no-repeat center center fixed;
-			  -webkit-background-size: cover;
-			  -moz-background-size: cover;
-			  -o-background-size: cover;
-			  background-size: cover;
-			}
-
-			h1 {
-				color: white;
-				font-family: 'Helvetica Neue', Helvetica;
-				font-weight: 100;
-				font-size: 60px;
-				margin: 0px;
-			}
-
-			p {
-				color: white;
-				font-family: 'Helvetica Neue', Helvetica;
-				font-weight: 200;
-			}
-
-			.box {
-				background-color: rgba(0,0,0,0.6);
-				padding: 20px;
-				width: 300px;
-				margin: 300px auto;
-				text-align: center;
-			}
-		</style>
-	</head>
-
-	<body>
-		<div class="box">
-			<h1>Samuel Chan</h1>
-
-			<p>
-					<i>Web Developer</i>
-			</p>
-
-			<p>
-				Learning to code! Loves to travel and take pictures.
-			</p>
-
-			<br />
-			<br />
-			<br />
-
-			<a href="https://github.com/samuelchan22">
-				<img src="github.png" width="96" />
-			</a>
-
-		</div>
-
-	</body>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="script.js"></script>
+  <title>Transifex Restaurant Picker</title>
+  </head>
+<body>
+  <script type="text/javascript">
+        // # of images
+        var imgCount = 7;
+        // image directory
+        var dir = 'images/';
+        // random the images
+        var randomCount = Math.round(Math.random() * (imgCount - 1)) + 1;
+        // array of images & file name
+        var images = new Array
+                images[1] = "bibimbap.jpg",
+                images[2] = "coucous.jpg",
+                images[3] = "pizza.jpg",
+                images[4] = "salad.jpg",
+                images[5] = "sandwich.jpg",
+                images[6] = "skewers.jpg",
+                images[7] = "sushi.jpg",
+        document.body.style.backgroundImage = "url(" + dir + images[randomCount] + ")";
+        document.body.style.backgroundRepeat = "no-repeat"; // Background repeat
+        document.body.style.backgroundPosition = "center center"; // Background centered
+        document.body.style.backgroundAttachment = "fixed"; // Background fixed
+  </script>
+  <div class="box">
+    <img src="images/icons/fork-gray.png" width="64" />
+    <h1 id="selection">Can't decide on a restaurant?</h1>
+    <br/>
+    <button class="btn" type="button" onclick="randomRestaurant()">Pick for me</button>
+  </div>
+  <div style="position: relative">
+    <p class="footer">Made with <img src="images/icons/heart-gray.png" width="14" /> in Menlo Park</p>
+  </div>
+</body>
 </html>
