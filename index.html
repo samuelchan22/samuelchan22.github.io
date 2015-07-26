@@ -28,14 +28,17 @@
         document.body.style.backgroundPosition = "center center"; // Background centered
         document.body.style.backgroundAttachment = "fixed"; // Background fixed
   </script>
-  <div class="box">
-    <img src="images/icons/fork-gray.png" width="64" />
-    <h1 id="selection">Can't decide on a restaurant?</h1>
-    <br/>
-    <button class="btn" type="button" onclick="randomRestaurant()">Pick for me</button>
+  <div id="wrapper">
+    <div class="box">
+      <img src="images/icons/fork-gray.png" width="64" />
+      <h1 id="selection">Can't decide on a restaurant?</h1>
+      <br/>
+      <button class="btn" type="button" onclick="randomRestaurant()">Pick for me</button>
+    </div>
+    <br>
+    <div id="footer">
+      <p class="about">Made with <img src="images/icons/heart-gray.png" width="14" /> in Menlo Park</p>
+    </div>
   </div>
-  <footer class="footer">
-    <p class="about">Made with <img src="images/icons/heart-gray.png" width="14" /> in Menlo Park</p>
-  </footer>
 </body>
 </html>
